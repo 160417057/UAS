@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DokterList2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emptytodo">your list is empty, make a new one</string>
+    <string name="newdokter">New Dokter</string>
+    <string name="doktername">Dokter Name</string>
+    <string name="jabatandokter">Jabatan Dokter</string>
+    <string name="praktekdokter">Praktek Dokter</string>
+    <string name="dokterphone">Dokter Phone</string>
+    <string name="createdokter">Create Dokter</string>
+    <string name="priority">Priority</string>
+    <string name="highpriority">High Priority</string>
+    <string name="mediumpriority">Medium Priority</string>
+    <string name="lowpriority">Low Priority</string>
+    <string name="editdokter">Edit Dokter</string>
+    <string name="savechange">Save Change</string>
+</resources>

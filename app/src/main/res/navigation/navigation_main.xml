@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/dokterListFragment">
+
+    <fragment
+        android:id="@+id/dokterListFragment"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.DokterListFragment"
+        android:label="fragment_dokter_list"
+        tools:layout="@layout/fragment_dokter_list" >
+        <action
+            android:id="@+id/actionCreateDokter"
+            app:destination="@id/createDokterFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/actionEditDokterFragment"
+            app:destination="@id/editDokterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createDokterFragment"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.CreateDokterFragment"
+        android:label="fragment_create_dokter"
+        tools:layout="@layout/fragment_create_dokter" />
+    <fragment
+        android:id="@+id/editDokterFragment"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.EditDokterFragment"
+        android:label="EditDokterFragment" >
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
