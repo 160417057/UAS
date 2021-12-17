@@ -13,7 +13,7 @@ import id.ac.ubaya.informatika.dokterlist2.model.Dokter
 import kotlinx.android.synthetic.main.dokter_item_layout.view.*
 
 class DokterListAdapter(val  dokterlist:ArrayList<Dokter>, val adapterOnClick:(Any) -> Unit):RecyclerView.Adapter<DokterListAdapter.DokterListViewHolder>(),
-    DokterCheckedChangeListener, DokterEditClickListener {
+    DokterCheckedChangeListener, DokterEditClickListener, DokterDetailClickListener {
     class DokterListViewHolder(var view:DokterItemLayoutBinding): RecyclerView.ViewHolder(view.root)
 
     fun updateDokterList(newDokterList:List<Dokter>){
@@ -49,6 +49,12 @@ class DokterListAdapter(val  dokterlist:ArrayList<Dokter>, val adapterOnClick:(A
 
     override fun onDokterEditClick(v: View) {
         val action = DokterListFragmentDirections.actionEditDokterFragment(v.tag.toString().toInt())
+        Navigation.findNavController(v).navigate(action)
+    }
+
+    override fun onDokterDetailClick(v: View) {
+        val uuid = v.tag.toString().toInt()
+        val action = DokterListFragmentDirections.actionDetailDokterFragment(uuid)
         Navigation.findNavController(v).navigate(action)
     }
 }

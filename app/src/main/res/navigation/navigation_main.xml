@@ -18,6 +18,9 @@
         <action
             android:id="@+id/actionEditDokterFragment"
             app:destination="@id/editDokterFragment" />
+        <action
+            android:id="@+id/actionDetailDokterFragment"
+            app:destination="@id/dokterListItem" />
     </fragment>
     <fragment
         android:id="@+id/createDokterFragment"
@@ -42,4 +45,12 @@
         android:name="id.ac.ubaya.informatika.dokterlist2.view.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/dokterListItem"
+        android:name="id.ac.ubaya.informatika.dokterlist2.view.DokterListItem"
+        android:label="DokterListItem" >
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
+    </fragment>
 </navigation>

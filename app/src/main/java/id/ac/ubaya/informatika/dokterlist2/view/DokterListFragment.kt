@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.ac.ubaya.informatika.dokterlist2.R
 import id.ac.ubaya.informatika.dokterlist2.model.Dokter
@@ -23,7 +24,10 @@ class DokterListFragment : Fragment() {
         {item -> doClick(item)})
 
     fun doClick(item:Any){
-        viewModel.clearTask(item as Dokter)
+        //viewModel.clearTask(item as Dokter)
+
+        val action = DokterListFragmentDirections.actionDetailDokterFragment((item as Dokter).uuid)
+        findNavController().navigate(action)
     }
 
     override fun onCreateView(

@@ -19,3 +19,8 @@ interface RadioClickListener {
 interface DokterSaveChangesListener {
     fun onDokterSaveChanges(v: View, obj: Dokter)
 }
+
+interface DokterDetailClickListener{
+    fun onDokterDetailClick(v: View)
+}
+

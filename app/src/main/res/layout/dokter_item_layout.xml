@@ -8,10 +8,16 @@
         <variable name="dokter" type="id.ac.ubaya.informatika.dokterlist2.model.Dokter" />
         <variable name="listener" type="id.ac.ubaya.informatika.dokterlist2.view.DokterCheckedChangeListener" />
         <variable name="editlistener" type="id.ac.ubaya.informatika.dokterlist2.view.DokterEditClickListener" />
+        <variable
+            name="detaillistener"
+            type="id.ac.ubaya.informatika.dokterlist2.view.DokterDetailClickListener" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:tag="@{dokter.uuid}"
+    android:onClick="@{detaillistener::onDokterDetailClick}">
+
 
     <CheckBox
         android:id="@+id/checkTask"

@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import id.ac.ubaya.informatika.dokterlist2.R
 import id.ac.ubaya.informatika.dokterlist2.model.Dokter
+import id.ac.ubaya.informatika.dokterlist2.util.NotificationHelper
 import id.ac.ubaya.informatika.dokterlist2.viewmodel.DetailDokterViewModel
 import kotlinx.android.synthetic.main.fragment_create_dokter.*
 
@@ -30,6 +31,7 @@ class CreateDokterFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(DetailDokterViewModel::class.java)
 
         btnCreateDokter.setOnClickListener {
+            NotificationHelper(view.context).createNotification("Dokter Created", "A new Dokter has been created")
             val radio = view.findViewById<RadioButton>(radioGroupPriority.checkedRadioButtonId)
             var dokter = Dokter(txtDokterName.text.toString(),txtJabatanDokter.text.toString()
                 ,txtPraktekDokter.text.toString(),txtDokterPhone.text.toString(),radio.tag.toString().toInt())
