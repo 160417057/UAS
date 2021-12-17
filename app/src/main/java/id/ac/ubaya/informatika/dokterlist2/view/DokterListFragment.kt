@@ -24,10 +24,10 @@ class DokterListFragment : Fragment() {
         {item -> doClick(item)})
 
     fun doClick(item:Any){
-        //viewModel.clearTask(item as Dokter)
+        viewModel.clearTask(item as Dokter)
 
-        val action = DokterListFragmentDirections.actionDetailDokterFragment((item as Dokter).uuid)
-        findNavController().navigate(action)
+        //val action = DokterListFragmentDirections.actionDetailDokterFragment((item as Dokter).uuid)
+        //findNavController().navigate(action)
     }
 
     override fun onCreateView(
